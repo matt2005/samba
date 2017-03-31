@@ -4,7 +4,7 @@ apt-get -y update
 apt-get -y  install libcups2 samba samba-common cups
 systemctl stop smbd.service
 mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-mkdir - /home/shares/allusers
+mkdir -p /home/shares/allusers
 cat >/etc/samba/smb.conf << EOF
 [global]
   workgroup = WORKGROUP
